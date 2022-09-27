@@ -2,10 +2,10 @@
 proc answer1():float = 
   const a1 = 2
   const a3 = 6
-  #[a2 = a1 + d
+  #[
   a3 = a1 + 2d = 6
   a1 + 2d = 6]#
-  var 二倍公差 = 6 - a1
+  var 二倍公差 = a3 - a1
   var 公差 = 二倍公差 / 2
   var a7 = a1 + 6 * 公差
   return a7
@@ -18,8 +18,9 @@ proc answer2():seq[float] =
   a8 = a1 + 7d ]#
   var 三倍公差 = 3
   var d = 3 / 三倍公差
-  #a1 + 四倍公差 = -1
-  #a1 + d * 4 = -1
+  #方程组
+  #{a1 + 四倍公差 = -1
+  #{a1 + d * 4 = -1
   var a1 = -1 - 4 * d
   var mresult:seq[float] = @[]
   mresult.add(a1)
