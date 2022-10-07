@@ -33,11 +33,17 @@ echo "请输入样本数据，输入完成按回车"
 echo "如果想结束输入并计算结果 请输入end并回车"
 while true:
   var input = stdin.readLine()
-  try:
-    var number:float = strutils.parseFloat(input)
-    data.add(number)
-  except ValueError:
-    # 这里是字符串
-    if input == "end":
-      echo "结果",calc()
-      break
+  if input == "end":
+    echo "输入的所有样本数据", data
+    echo "结果",calc()
+    break
+  else:
+    try:
+      var number:float = strutils.parseFloat(input)
+      data.add(number)
+      # echo "第二次循环的值", number
+    except ValueError:
+      # 这里是字符串
+      echo "你输入了不支持的字符串命令,引发了parseFloat()无法正确解析为float类型的异常"
+      echo "请重新输入"
+      echo "目前程序内部的样本数组为 " , data
